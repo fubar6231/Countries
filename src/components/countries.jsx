@@ -14,7 +14,7 @@ class Countries extends React.Component {
         }
     }
 
-    calculation=()=>{this.result=this.state.countries.filter((country) => {
+    filters=()=>{this.result=this.state.countries.filter((country) => {
         if (country.region.toLowerCase() === this.state.region.toLowerCase()) {
             return country
         } else if (this.state.region === "") {
@@ -38,7 +38,7 @@ class Countries extends React.Component {
     }
 
     render() {
-        this.calculation()
+        this.filters()
         let finalElement
         if(this.result.length===0){
             finalElement= <h1>No such Country</h1>
