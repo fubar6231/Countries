@@ -10,8 +10,8 @@ class NavBar extends Component {
         return (
             <div style={{display:"flex",justifyContent:"space-around",alignItems:"center"}}>
                 <h1>Countries</h1>
-                <Search onInput={this.props.onInput}/>
-                <Filter onFilter={this.props.onFilter}/>
+                <Search onInput={this.props.onInput} />
+                <Filter onFilter={this.props.onFilter} countryData={this.props.countryData}/>
             </div>
         );
     }

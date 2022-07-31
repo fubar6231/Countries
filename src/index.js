@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 import Countries from "./components/countries";
+import RoutedCountry from "./components/routedCountry";
 
 import reportWebVitals from './reportWebVitals';
 
+const countryPath = (val)=> val
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Countries />
-  </React.StrictMode>
+    <Countries/>
 );
 
 // If you want to start measuring performance in your app, pass a function

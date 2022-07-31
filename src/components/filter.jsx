@@ -1,14 +1,12 @@
 import React from 'react';
 
-import countries from "../countries.json";
-
-const regions = countries.reduce((acc,current)=>{
-    acc.add(current.region)
-    return acc
-},new Set())
 
 
 function Filter(props) {
+    const regions = props.countryData.reduce((acc,current)=>{
+        acc.add(current.region)
+        return acc
+    },new Set())
 
     return (
         <div>
